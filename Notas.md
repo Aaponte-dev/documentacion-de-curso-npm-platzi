@@ -55,3 +55,5 @@ La página oficial de NPM permite conocer toda la información de un paquete. Po
 Existen otros gestores de dependencias, como Yarn o PNPM. No obstante, en este curso se tratará sobre NPM, ya que es el más popular. Aunque estos gestores comparten funcionalidades en común.
 
 Contribución creada por Andrés Guano (Platzi Contributor).
+
+3.- Instalación de NPM en MacOS
