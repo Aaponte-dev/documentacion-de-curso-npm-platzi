@@ -57,3 +57,5 @@ Existen otros gestores de dependencias, como Yarn o PNPM. No obstante, en este c
 Contribución creada por Andrés Guano (Platzi Contributor).
 
 3.- Instalación de NPM en MacOS
+
+4.- Instalación de NPM en Windows
