@@ -430,3 +430,35 @@ Cónsola:
 $ npx create-react-app <nombre>
 $ npx create-next-app <nombre>
 ```
+
+9.- Actualización de dependencias
+
+Conocer cómo actualizar dependencias es muy importante para mantener tus proyectos actualizados y libres de vulnerabilidades de seguridad.
+
+El comando ``npm outdate`` mostrará los paquetes que están desactualizados. Con el comando ``npm outdate --dd`` verás de manera más detallada esta información.
+
+### Cómo actualizar dependencias
+
+Para actualizar todas las dependencias utiliza el siguiente comando:
+
+```bash
+Cónsola:
+
+$ npm update
+```
+
+Ten en cuenta que actualizar varios paquetes no es recomendable, solamente deberías actualizar un paquete si estás muy seguro de que no afectará al proyecto y que realizaste los cambios pertinentes.
+
+```bash
+Cónsola:
+
+$ npm update <paquete>
+```
+
+Utiliza el siguiente comando para actualizar a la última versión (latest) de la dependencia, donde es el nombre del paquete.
+
+```bash
+Cónsola:
+
+$ npm install <paquete>@latest
+```
