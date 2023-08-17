@@ -372,4 +372,61 @@ Si únicamente tenías el archivo `package.json` después de ejecutar el comando
 
 El archivo `package-lock.json` muestra todo el árbol de dependencias de tu proyecto. ¿Qué significa esto? Cada dependencia instalada también tiene sus respectivas dependencias, a estas se las denomina sub-dependencias. El árbol de dependencias muestra todas las sub-dependencias como si de ramas se tratasen.
 
-El directorio `node_modules` contiene todos los archivos ejecutables de Nodejs y los módulos que contiene cada dependencia. Este directorio es ignorado por los repositorios de Git, por eso es importante el archivo package.json, ya que te permitirá instalar las dependencias con npm install cuando realices un fork de cualquier repositorio.
+El directorio `node_modules` contiene todos los archivos ejecutables de Nodejs y los módulos que contiene cada dependencia. Este directorio es ignorado por los repositorios de Git, por eso es importante el archivo `package.json`, ya que te permitirá instalar las dependencias con npm install cuando realices un fork de cualquier repositorio.
+
+8.- Comandos en NPM (Scripts)
+
+El apartado de `"scripts"` en el `package.json` es el que indica los comandos a ejecutar del proyecto. Esta sección es la que utilizarás para crear comandos que optimicen el desarrollo de tu aplicación.
+
+### Cómo crear un comando en tu proyecto
+
+Para crear un comando en tu proyecto, utiliza la siguiente estructura, donde es el nombre del comando que debería ser muy descriptivo y es el comando que utilizarías en la terminal.
+
+```bash
+{
+    "scripts": {
+        "<nombre>": "<comando>"
+    }
+}
+```
+
+Una vez hayas escrito el comando en el archivo `package.json`, la manera de ejecutarlo en la terminal será con el comando `npm run <nombre>`.
+
+### Creemos algunos comandos comunes
+
+Creemos tres comandos comunes: para iniciar el proyecto (start), crear un archivo para producción (build) y combinarlos (deploy). Que no te preocupe si no entiendes cada comando, solo entiende cómo ejecuta `NPM el script`.
+
+```bash
+{
+    "scripts": {
+        "start": "webpack-dev-server --open --mode development",
+        "build": "webpack --mode production",
+        "deploy": "npm run format && npm run build"
+    }
+}
+```
+
+Y para ejecutarlos, es necesario utilizar el comando respectivo en la terminal:
+
+```bash
+Cónsola:
+
+$ npm run start || npm start
+$ npm run build || npm build
+$ npm run deploy || npm deploy
+```
+
+`NPM` provee algunos alias, como `npm start` que ejecuta lo mismo que `npm run start`.
+
+### Cómo ejecutar un paquete de manera directa
+
+`NPM` te permite instalar paquetes en tu proyecto, sin embargo, NPX (Node Package Execute) permite ejecutar un comando de NPM remotamente.
+
+Ejemplos de este comportamiento son los paquetes React y Nextjs, para iniciar un proyecto en estos se puede ejecutar los siguientes comandos, donde es el nombre del proyecto:
+
+```bash
+Cónsola:
+
+$ npx create-react-app <nombre>
+$ npx create-next-app <nombre>
+```
