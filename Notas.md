@@ -462,3 +462,47 @@ Cónsola:
 
 $ npm install <paquete>@latest
 ```
+
+10.- Seguridad y solución de problemas
+
+La seguridad de tu proyecto puede ser vulnerada por paquetes desactualizados. Al momento de instalar tus paquetes con el comando npm install muestra una serie de advertencias (NPM WARN) de las dependencias desactualizadas.
+
+### Auditar tus dependencias
+
+El comando `npm audit` muestra una descripción de las dependencias instaladas. Si se encuentran vulnerabilidades, se calculará el impacto al proyecto.
+
+Si se requiere un informe más detallado en formato JSON (JavaScript Object Notation), utiliza el comando `npm audit --json`.
+
+El comando `npm audit fix` proporciona una actualización de los paquetes, similar al comando `npm update <paquete>`. El comando `npm audit fix --force` proporciona una actualización de los subpaquetes de cada paquete, en todos sus niveles de profundidad.
+
+Si el problema `persiste`, es necesario actualizar el paquete a su última versión.
+
+```bash
+Cónsola:
+
+$ npm install <paquete>@latest
+```
+
+### Solución de problemas
+
+Cuando estés desarrollando un proyecto con NPM, puede que generes errores que no permitan seguir con tu trabajo. Saber manejar los errores es fundamental para solucionarlos y seguir con tus tareas (y no entrar en pánico). Alguno de estos errores pueden ser:
+
+* Errores en la configuración del archivo package.json
+* Errores de dependencias en node_modules
+* Errores del sistema operativo
+* Configuración errónea de Git o GitHub
+* Errores de escritura (typos)
+* Errores que no estén ligados directamente a NPM
+
+### Error de dependencias en node_modules
+
+Existen situaciones en las que instalas una dependencia con una versión que no corresponde a la deseada. Esto ocurre porque NPM guarda en el caché una versión previamente instalada de un paquete, esto para mejorar los tiempos de instalación.
+
+En esta situación, puedes utilizar los siguientes comandos, el primero para borrar el caché de NPM y el segundo para verificar si están eliminados correctamente.
+
+```bash
+Cónsola:
+
+$ npm cache clean --force
+$ npm cache verify
+```
