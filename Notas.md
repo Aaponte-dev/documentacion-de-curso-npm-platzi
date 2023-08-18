@@ -771,3 +771,15 @@ Una vez tengas estos requisitos, puedes actualizar tu paquete a una nueva versi�
 ### Cómo crear un archivo README.md para tu paquete
 
 Para crear un archivo README.md puedes utilizar esta [estructura base](https://gist.github.com/gndx/1b2c8482049c6d3b521dffcf33337558) y adecuarla a tu proyecto. Puedes mirar el código haciendo clic en el botón "Raw".
+
+15.- Sigue desarrollando en JavaScript
+
+🎉¡Lo has logrado! 🙌
+
+Completaste todas las clases del Curso de NPM: Gestión de Paquetes y Dependencias en JavaScript.
+
+✅ Si aún no queda claro algún tema, revisa las clases o deja tus dudas en la sección de preguntas.
+
+🧾 Realiza la prueba del curso para recibir tu certificado y no olvides dejar tus 🌟 y tu comentario.
+
+Y, sobre todo, ¡nunca pares de aprender! 💚
